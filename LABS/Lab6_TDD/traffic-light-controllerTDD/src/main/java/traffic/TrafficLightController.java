@@ -6,6 +6,10 @@ public class TrafficLightController {
         return currentColor;
     }
     public void change() {
+    if (currentColor == LightColor.RED) {
         currentColor = LightColor.GREEN;
+    } else if (currentColor == LightColor.GREEN) {
+        currentColor = LightColor.YELLOW;
     }
+}
 }
