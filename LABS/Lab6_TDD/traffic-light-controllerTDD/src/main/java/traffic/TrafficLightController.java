@@ -1,7 +1,11 @@
 package traffic;
 
 public class TrafficLightController {
+    private LightColor currentColor = LightColor.RED;
     public LightColor getCurrentColor() {
-        return LightColor.RED;
+        return currentColor;
+    }
+    public void change() {
+        currentColor = LightColor.GREEN;
     }
 }
