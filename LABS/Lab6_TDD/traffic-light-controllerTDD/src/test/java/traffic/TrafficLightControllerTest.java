@@ -27,4 +27,15 @@ class TrafficLightControllerTest {
 
         assertEquals(LightColor.YELLOW, tlc.getCurrentColor());
     }
+
+    @Test
+    void should_change_from_yellow_to_red() {
+        TrafficLightController tlc = new TrafficLightController();
+
+        tlc.change(); // RED → GREEN
+        tlc.change(); // GREEN → YELLOW
+        tlc.change(); // YELLOW → RED
+
+        assertEquals(LightColor.RED, tlc.getCurrentColor());
+    }
 }
